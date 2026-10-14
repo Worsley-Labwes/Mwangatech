@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mwangatech | Technology That Moves Business Forward</title>
+<meta name="description" content="Mwangatech designs, builds and runs custom software, AI systems and cloud platforms for businesses worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050d2b;--bg2:#0a1745;--sun:#ffd21f;--cy:#38bdf8;--white:#f2f5ff;--mute:#9aa6d6;--line:rgba(140,170,255,.2);--wa:#25d366;
+--display:"Space Grotesk","Segoe UI",system-ui,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);font:400 1.05rem/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:700}
+.sun{color:var(--sun)}
+.grad{background:linear-gradient(90deg,var(--sun),var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.5rem;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid var(--sun);transition:transform .15s,box-shadow .15s}
+.btn.pri{background:linear-gradient(135deg,#ffd21f,#ffb300);color:#050d2b;box-shadow:0 8px 30px rgba(255,200,30,.3)}
+.btn.pri:hover{transform:translateY(-2px)}
+.btn.sec{border-color:var(--line);background:rgba(255,255,255,.04);color:var(--cy)}
+.btn.sec:hover{border-color:var(--cy)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(5,13,43,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:40px;height:40px}
+.logo b{display:block;font:700 1.2rem var(--display);letter-spacing:.02em}
+.logo small{display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--mute);font-weight:500;font-size:.95rem}nav ul a:hover{color:var(--white)}
+nav .btn{padding:.55rem 1.1rem;font-size:.95rem}
+@media(max-width:820px){nav ul{display:none}.logo small{display:none}}
+.hero{position:relative;padding:90px 0 70px;overflow:hidden;background:radial-gradient(circle at 75% 30%,rgba(56,189,248,.18),transparent 55%),radial-gradient(circle at 10% 90%,rgba(255,210,31,.1),transparent 45%)}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.badge{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,210,31,.4);color:var(--sun);border-radius:999px;padding:.35rem 1rem;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,210,31,.06)}
+.badge i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.9rem);font-weight:700;margin:22px 0}
+.hero p.lead{color:var(--mute);font-size:1.18rem;max-width:46ch;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hs{display:flex;gap:38px;flex-wrap:wrap;margin-top:44px}
+.hs b{display:block;font:700 2.2rem var(--display);color:var(--cy)}.hs span{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.term{background:rgba(3,8,28,.92);border:1px solid var(--line);border-radius:16px;box-shadow:0 0 60px rgba(56,189,248,.22);overflow:hidden;font:500 .9rem/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.tb{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);color:var(--mute);font-size:.8rem}
+.tb i{width:11px;height:11px;border-radius:50%}.tb i:nth-child(1){background:#ff5f57}.tb i:nth-child(2){background:#febc2e}.tb i:nth-child(3){background:#28c840}.tb span{margin-left:auto}
+.code{padding:16px 18px;min-height:250px}
+.code div{opacity:0;animation:ln .5s forwards}
+.code div:nth-child(1){animation-delay:.4s}.code div:nth-child(2){animation-delay:1s}.code div:nth-child(3){animation-delay:1.6s}.code div:nth-child(4){animation-delay:2.2s}.code div:nth-child(5){animation-delay:2.8s}.code div:nth-child(6){animation-delay:3.4s}.code div:nth-child(7){animation-delay:4s}.code div:nth-child(8){animation-delay:4.6s}
+@keyframes ln{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.k{color:#c084fc}.s{color:#4ade80}.f{color:var(--sun)}.c{color:#6b7bb0}
+.cur{display:inline-block;width:8px;height:1.1em;background:var(--sun);vertical-align:-3px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.live{display:flex;justify-content:space-between;padding:10px 18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--mute)}.live b{color:#4ade80}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.code div{animation:none;opacity:1}.cur{animation:none}}
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;white-space:nowrap;background:rgba(255,255,255,.02)}
+.marq div{display:inline-flex;gap:44px;animation:mq 32s linear infinite;font:700 1.3rem var(--display);color:var(--mute)}
+.marq div span::after{content:"/";color:var(--sun);margin-left:44px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marq div{animation:none}.marq{overflow-x:auto}}
+section{padding:96px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.sh p{color:var(--mute);max-width:44ch;margin:0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border:1px solid var(--line);border-radius:18px;padding:26px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));transition:transform .2s,border-color .2s,box-shadow .2s}
+.tile:hover{transform:translateY(-5px);border-color:var(--cy);box-shadow:0 12px 40px rgba(56,189,248,.15)}
+.tile h3{font-size:1.25rem;margin-bottom:8px}.tile h3::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--sun),var(--cy));margin-bottom:16px}
+.tile p{margin:0;color:var(--mute);font-size:.98rem}
+@media(max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.tiles{grid-template-columns:1fr}}
+.dark{background:var(--bg2)}
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s}
+.card:hover{border-color:var(--sun)}
+.card.big{grid-column:1/-1;background:linear-gradient(135deg,#ffd21f,#ffb300);color:#050d2b;border:0}
+.card h3{font-size:1.7rem}.card.big h3{font-size:2.5rem}
+.card p{margin:0;color:var(--mute)}.card.big p{color:#1b2457;font-size:1.1rem;max-width:62ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;font-weight:700}
+.meta .k{color:var(--cy)}.big .meta .k{color:#050d2b}
+.chip{border-radius:999px;padding:.15rem .7rem;background:rgba(74,222,128,.15);color:#4ade80}
+.chip.p{background:rgba(255,210,31,.15);color:var(--sun)}.big .chip{background:#050d2b;color:var(--sun)}
+.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.stack span{border:1px solid var(--line);border-radius:8px;padding:.15rem .6rem;font-size:.82rem}
+.big .stack span{border-color:rgba(5,13,43,.4)}
+.links{display:flex;gap:16px;font-weight:700}.links a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.proj{grid-template-columns:1fr}.card.big h3{font-size:1.9rem}}
+.ind{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ind span{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:.5rem 1.2rem;font-weight:500}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:46px}
+.step{border-top:3px solid var(--sun);padding-top:16px}
+.step b{font:700 1.2rem var(--display);display:block;margin-bottom:6px}.step p{color:var(--mute);margin:0;font-size:.95rem}
+.step em{font:700 .85rem var(--display);font-style:normal;color:var(--cy)}
+@media(max-width:860px){.steps{grid-template-columns:1fr;gap:26px}}
+.contact .box{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.nums{display:grid;gap:12px;margin-top:26px}
+.nums a{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:16px;padding:14px 18px;text-decoration:none;font-weight:700;font-size:1.1rem;background:rgba(255,255,255,.03);transition:border-color .15s}
+.nums a:hover{border-color:var(--wa)}
+.nums svg{width:26px;height:26px;fill:var(--wa);flex:none}.nums small{display:block;color:var(--mute);font-weight:400;font-size:.85rem}
+.nums .tm{margin-left:auto;text-align:right;font:700 1.1rem var(--display);color:var(--cy)}.nums .tm small{color:var(--mute);font-family:var(--body)}
+form{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+input,select,textarea{font:inherit;color:var(--white);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--sun);outline-offset:1px;border-color:var(--sun)}
+textarea{min-height:110px;resize:vertical}
+form button{cursor:pointer;font:700 1.05rem var(--body);justify-content:center}
+.note{color:var(--mute);font-size:.85rem;margin:0}
+@media(max-width:860px){.contact .box{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 14.9L2 22l5.300-1.400A10 10 0 1 0 12 2Zm0 1.800a8.200 8.200 0 1 1-4.200 15.200l-.3-.2-3.100.8.8-3-.2-.3A8.200 8.200 0 0 1 12 3.800Z"/><path d="M8.600 7.400c-.2 0-.5.100-.7.400-.3.300-.9.900-.9 2.100s.9 2.400 1 2.600c.1.200 1.800 2.800 4.400 3.800 2.200.9 2.600.7 3.100.7.500-.1 1.500-.6 1.700-1.200.2-.6.200-1.100.2-1.200-.1-.1-.2-.2-.5-.3l-1.600-.8c-.2-.1-.4-.1-.6.100l-.7.900c-.1.200-.3.200-.5.100-.8-.4-2.300-1.100-3.100-2.700-.1-.2 0-.3.100-.4l.4-.5c.1-.1.100-.3.200-.4 0-.1 0-.3 0-.4l-.7-1.700c-.2-.5-.4-.4-.6-.4h-.5Z"/></symbol></svg>
+<nav><div class="wrap">
+  <a class="logo" href="#top" aria-label="Mwangatech home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#111"/><g fill="#ffd21f"><rect x="6" y="9" width="2" height="22"/><rect x="10" y="9" width="2" height="22"/><rect x="14" y="9" width="2" height="22"/></g><path d="M19 30V11l7 10 7-10v19" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/></svg>
+    <span><b>Mwangatech</b><small>Technology That Moves Business Forward</small></span></a>
+  <ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="btn pri" href="#contact">Get in touch</a>
+</div></nav>
+
+<header class="hero" id="top"><canvas id="net" aria-hidden="true"></canvas><div class="wrap">
+  <div>
+    <span class="badge"><i></i>Technology that moves business forward</span>
+    <h1>Innovative<br>Software Solutions<br><span class="grad">For Global Business</span></h1>
+    <p class="lead">Mwangatech designs, builds and runs custom software, AI systems and cloud platforms for companies and teams in any country and time zone.</p>
+    <div class="cta"><a class="btn pri" href="#work">Explore our work &rarr;</a><a class="btn sec" href="#services">Our services</a></div>
+    <div class="hs"><div><b>4+</b><span>Years engineering</span></div><div><b>10+</b><span>Products built</span></div><div><b>12</b><span>Service areas</span></div><div><b>24/7</b><span>Remote-first</span></div></div>
+  </div>
+  <div class="term" aria-label="Code sample">
+    <div class="tb"><i></i><i></i><i></i><span>mwangatech &mdash; build.ts</span></div>
+    <div class="code">
+      <div><span class="k">import</span> { Idea } <span class="k">from</span> <span class="s">'@mwangatech/core'</span>;</div>
+      <div>&nbsp;</div>
+      <div><span class="k">const</span> product = <span class="k">await</span> <span class="f">build</span>({</div>
+      <div>&nbsp;&nbsp;idea: Idea.<span class="f">fromYou</span>(),</div>
+      <div>&nbsp;&nbsp;stack: [<span class="s">'React'</span>, <span class="s">'Node'</span>, <span class="s">'AI'</span>],</div>
+      <div>&nbsp;&nbsp;cloud: <span class="s">'AWS | Azure'</span>,</div>
+      <div>});</div>
+      <div><span class="f">deploy</span>(product); <span class="c">// live, worldwide</span><span class="cur"></span></div>
+    </div>
+    <div class="live"><span><b>&#9679;</b> build passing</span><span>TypeScript &middot; UTF-8</span></div>
+  </div>
+</div></header>
+<div class="marq" aria-hidden="true"><div><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Java</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>MongoDB</span><span>LangChain</span><span>n8n</span><span>Docker</span><span>AWS</span><span>Azure</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Java</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>MongoDB</span><span>LangChain</span><span>n8n</span><span>Docker</span><span>AWS</span><span>Azure</span></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sh"><h2>Everything a <span class="grad">software company</span> should do</h2><p>One partner from first idea to long-term support, so you don't juggle five vendors.</p></div>
+  <div class="tiles"><div class="tile"><h3>Custom software development</h3><p>Tailored web platforms and business systems built around how your company actually works.</p></div><div class="tile"><h3>Web &amp; frontend engineering</h3><p>Fast, accessible interfaces in React and Next.js that look sharp on every device.</p></div><div class="tile"><h3>Backend &amp; API engineering</h3><p>Secure Node.js and REST services, plus integrations with the tools you already use.</p></div><div class="tile"><h3>AI &amp; GenAI solutions</h3><p>Assistants, document Q&amp;A (RAG) and AI features connected to your own data.</p></div><div class="tile"><h3>Automation &amp; workflows</h3><p>Replace repetitive manual work with automated pipelines, built with n8n and code.</p></div><div class="tile"><h3>Payments &amp; fintech</h3><p>Checkout, invoicing and payment gateway integrations for mobile money and cards.</p></div><div class="tile"><h3>Cloud &amp; DevOps</h3><p>Deployments, containers, CI/CD and monitoring on AWS, Azure and modern hosts.</p></div><div class="tile"><h3>Data &amp; databases</h3><p>Schema design, performance tuning and dashboards on PostgreSQL, MongoDB and more.</p></div><div class="tile"><h3>Security &amp; compliance tools</h3><p>Risk assessments, awareness training and compliance tooling for growing teams.</p></div><div class="tile"><h3>Product design &amp; prototyping</h3><p>Turn an idea into clickable prototypes and an MVP you can put in front of users.</p></div><div class="tile"><h3>Consulting &amp; technical audits</h3><p>Architecture reviews, code audits and honest advice before you commit budget.</p></div><div class="tile"><h3>Support &amp; maintenance</h3><p>Bug fixes, upgrades and troubleshooting so your systems stay healthy after launch.</p></div></div>
+</div></section>
+
+<section class="dark" id="work"><div class="wrap">
+  <div class="sh"><h2>Selected <span class="grad">work</span></h2><p>Products, platforms and prototypes we have designed and built across AI, fintech, healthcare, climate and security.</p></div>
+  <div class="proj">
+<article class="card big"><div class="meta"><span class="k">Booking &amp; payments</span><span class="chip">Live</span></div><h3>Fedha Cuts</h3><p>Full-stack booking platform for salons and barbershops: live availability, online payments, separate owner and customer accounts, email verification and multi-location management.</p><div class="stack"><span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>JWT</span></div><div class="links"><a href="https://fedhacutssalon.vercel.app" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Worsley-Labwes/fedha-cuts-mpesa-booking" target="_blank" rel="noopener">GitHub</a></div></article>
+<article class="card"><div class="meta"><span class="k">AI &amp; RAG</span><span class="chip">Live</span></div><h3>Askforge</h3><p>Ask questions across your own documents. A retrieval pipeline that works with multiple LLM providers.</p><div class="stack"><span>LangChain</span><span>ChromaDB</span><span>OpenAI</span><span>Mistral</span><span>Gemini</span></div><div class="links"><a href="https://web-production-d46ef.up.railway.app" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Worsley-Labwes/contextIQ" target="_blank" rel="noopener">GitHub</a></div></article>
+<article class="card"><div class="meta"><span class="k">Enterprise AI</span></div><h3>LegacyLink AI</h3><p>A natural-language query engine and change-data-capture pipeline that lets teams ask questions of legacy ERP systems.</p><div class="stack"><span>FastAPI</span><span>Python</span><span>CDC</span><span>LLM</span></div></article>
+<article class="card"><div class="meta"><span class="k">Compliance automation</span><span class="chip p">In development</span></div><h3>TaxPilot</h3><p>AI-powered tax compliance automation running on queue-based workflows with a vector knowledge base.</p><div class="stack"><span>n8n</span><span>PostgreSQL</span><span>pgvector</span><span>Redis</span><span>Docker</span></div></article>
+<article class="card"><div class="meta"><span class="k">Healthcare AI</span><span class="chip p">Prototype</span></div><h3>Wingu la Dalili</h3><p>Multilingual symptom-intake assistant that turns patient descriptions into a structured handoff card for clinic nurses. Privacy-first with no data stored. Built with a team.</p><div class="stack"><span>Next.js</span><span>TypeScript</span><span>Claude API</span><span>Tailwind</span></div><div class="links"><a href="https://github.com/Kamara-AI/kazi-kabla-ya-daktari" target="_blank" rel="noopener">GitHub</a></div></article>
+<article class="card"><div class="meta"><span class="k">Climate &amp; agriculture</span><span class="chip p">Prototype</span></div><h3>MaziAI</h3><p>Climate risk platform scoring drought, flood and heat stress by zone, with maps, trends and recommendations for farming communities.</p><div class="stack"><span>FastAPI</span><span>React</span><span>Leaflet</span><span>Recharts</span></div></article>
+<article class="card"><div class="meta"><span class="k">Cybersecurity</span><span class="chip p">Research project</span></div><h3>CAAS</h3><p>Cybersecurity assessment and awareness system for small businesses: assessments, training modules, network scanning and reports.</p><div class="stack"><span>Flask</span><span>SQLite</span><span>Chart.js</span><span>Python</span></div></article>
+<article class="card"><div class="meta"><span class="k">Fintech tools</span></div><h3>InvoiceKE</h3><p>Invoice tracker with VAT calculation, QR codes and PDF export.</p><div class="stack"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div></article>
+<article class="card"><div class="meta"><span class="k">Fintech tools</span></div><h3>ChamaSplit</h3><p>Group expense splitter with a settle-up algorithm that minimises transfers and live currency conversion.</p><div class="stack"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Exchange API</span></div></article>
+<article class="card"><div class="meta"><span class="k">Community platform</span></div><h3>DevCircuit</h3><p>Tech events discovery app: browse, save and share events, find teammates and manage events from an organizer studio.</p><div class="stack"><span>React</span><span>Vite</span></div></article>
+  </div>
+  <div class="ind"><span>Fintech &amp; payments</span><span>Healthcare</span><span>Agriculture &amp; climate</span><span>Retail &amp; bookings</span><span>Enterprise &amp; ERP</span><span>Security</span><span>Startups</span></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <h2>From idea to <span class="grad">live</span> in five steps</h2>
+  <div class="steps">
+    <div class="step"><em>01</em><b>Discover</b><p>We learn your goals, users and constraints.</p></div>
+    <div class="step"><em>02</em><b>Plan</b><p>Scope, price and timeline agreed before any code.</p></div>
+    <div class="step"><em>03</em><b>Design</b><p>Architecture, data and interface built to scale.</p></div>
+    <div class="step"><em>04</em><b>Build</b><p>Working releases you can test along the way.</p></div>
+    <div class="step"><em>05</em><b>Launch &amp; support</b><p>We deploy, monitor and keep improving.</p></div>
+  </div>
+</div></section>
+
+<section class="dark contact" id="contact"><div class="wrap box">
+  <div>
+    <h2>Work with us, <span class="grad">wherever you are.</span></h2>
+    <p style="color:var(--mute);max-width:40ch">We work remotely with clients across time zones. Message us on WhatsApp at the number closest to you.</p>
+    <div class="nums">
+      <a href="https://wa.me/919944396628?text=Hi%20Mwangatech"><svg><use href="#wa"/></svg><span>+91 99443 96628<small>WhatsApp, India</small></span><span class="tm" data-tz="Asia/Kolkata">--:--<small>local time</small></span></a>
+      <a href="https://wa.me/254745764368?text=Hi%20Mwangatech"><svg><use href="#wa"/></svg><span>+254 745 764 368<small>WhatsApp, Kenya</small></span><span class="tm" data-tz="Africa/Nairobi">--:--<small>local time</small></span></a>
+      <a href="https://wa.me/264852113203?text=Hi%20Mwangatech"><svg><use href="#wa"/></svg><span>+264 85 211 3203<small>WhatsApp, Namibia</small></span><span class="tm" data-tz="Africa/Windhoek">--:--<small>local time</small></span></a>
+    </div>
+  </div>
+  <form id="f">
+    <label>Your name<input id="n" required autocomplete="name"></label>
+    <label>What do you need?
+      <select id="s"><option>Custom software or web app</option><option>AI or GenAI solution</option><option>Automation</option><option>Payments or integrations</option><option>Cloud &amp; DevOps</option><option>Consulting or audit</option><option>Support &amp; maintenance</option><option>Something else</option></select></label>
+    <label>Tell us more<textarea id="m" placeholder="What are you trying to achieve?"></textarea></label>
+    <button class="btn pri" type="submit">Send on WhatsApp</button>
+    <p class="note">This opens WhatsApp with your message ready to send.</p>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Mwangatech. Technology That Moves Business Forward.</span><span>Software &amp; AI solutions, worldwide.</span></div></footer>
+<a class="wa-float" href="https://wa.me/919944396628?text=Hi%20Mwangatech" aria-label="Chat on WhatsApp"><svg><use href="#wa"/></svg></a>
+<script>
+var PRIMARY="919944396628";
+document.getElementById('y').textContent=new Date().getFullYear();
+function clocks(){document.querySelectorAll('.tm').forEach(function(el){
+  try{el.firstChild.nodeValue=new Intl.DateTimeFormat([], {hour:'2-digit',minute:'2-digit',timeZone:el.dataset.tz}).format(new Date());}catch(e){}});}
+clocks();setInterval(clocks,30000);
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var t='Hi Mwangatech, my name is '+document.getElementById('n').value+'. I need: '+document.getElementById('s').value+'. '+document.getElementById('m').value;
+  window.open('https://wa.me/'+PRIMARY+'?text='+encodeURIComponent(t),'_blank','noopener');
+});
+(function(){
+  var c=document.getElementById('net'),x=c.getContext('2d'),N=[],W,H,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  size();addEventListener('resize',size);
+  for(var i=0;i<55;i++)N.push({x:Math.random()*2000,y:Math.random()*900,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4});
+  function draw(){
+    x.clearRect(0,0,W,H);
+    N.forEach(function(a){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;});
+    for(var i=0;i<N.length;i++){
+      for(var j=i+1;j<N.length;j++){var d=Math.hypot(N[i].x-N[j].x,N[i].y-N[j].y);
+        if(d<150){x.strokeStyle='rgba(56,189,248,'+(0.35*(1-d/150))+')';x.beginPath();x.moveTo(N[i].x,N[i].y);x.lineTo(N[j].x,N[j].y);x.stroke();}}
+      x.fillStyle=i%7?'rgba(56,189,248,.8)':'rgba(255,210,31,.9)';x.beginPath();x.arc(N[i].x,N[i].y,2.2,0,6.3);x.fill();}
+    if(!reduce)requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
